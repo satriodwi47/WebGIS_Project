@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Database Interaktif Bidang Wilayah III Pusdal LH Jawa Provinsi Jawa Timur</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-2 sm:p-4">
+        <h1 class="text-xl sm:text-3xl font-bold text-center mb-2 sm:mb-4 bg-green-800 text-white py-2">Database Interaktif Bidang Wilayah III Pusdal LH Jawa Provinsi Jawa Timur</h1>
+        <img src="gambar.png" alt="Logo" class="absolute top-2 sm:top-4 right-2 sm:right-4 h-10 sm:h-14 w-auto">
+        <!-- Search Bar -->
+        <div class="absolute top-24 sm:top-40 left-2 sm:left-4 z-[1000] bg-white p-2 rounded shadow w-[calc(100%-1rem)] sm:w-72">
+            <input type="text" id="searchInput" placeholder="Cari Kabupaten..." class="border p-1 sm:p-2 rounded w-full text-xs sm:text-base">
+        </div>
+        <!-- Toggle Button for Layer Control (Mobile Only) -->
+        <button id="toggleLayerControl" class="sm:hidden absolute top-16 right-2 z-[1000] bg-green-800 text-white p-2 rounded shadow">
+            ☰
+        </button>
+        <!-- Map -->
+        <div id="map" class="h-[calc(100vh-120px)] sm:h-[80vh] w-full rounded shadow"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
