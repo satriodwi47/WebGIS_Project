@@ -12,7 +12,15 @@ map.fitBounds(bounds);
     window.addEventListener('resize', function () {
         map.invalidateSize(); // Menyesuaikan ukuran peta saat window di-resize
     });
-
+fetch('data/kabupaten_jatim.geojson')
+    .then(response => response.json())
+    .then(data => {
+        L.geoJSON(data, {
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(feature.properties.nama_kabupaten);
+            }
+        }).addTo(map);
+    });
     // Toggle layer control untuk mobile
     var layerControl = document.querySelector('.leaflet-control.custom-control');
     document.getElementById('toggleLayerControl').addEventListener('click', function () {
